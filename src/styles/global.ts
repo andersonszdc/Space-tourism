@@ -58,4 +58,8 @@ export default createGlobalStyle`
     font-family: inherit;
     border: none;
   }
+
+  li {
+    list-style: none;
+  }
 `;
