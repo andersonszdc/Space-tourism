@@ -1,3 +1,4 @@
+import MainButton from "../components/MainButton";
 import { Main } from "../styles";
 
 export default function Index() {
@@ -13,6 +14,7 @@ export default function Index() {
         experience!
       </p>
       <button>explore</button>
+      <MainButton />
     </Main>
   );
 }
