@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../../components/NavBar";
 
 const Technology = () => {
   return (
@@ -25,3 +26,5 @@ const Technology = () => {
 };
 
 export default Technology;
+
+Technology.layout = NavBar;

@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../../components/NavBar";
 
 const Crew = () => {
   return (
@@ -21,3 +22,5 @@ const Crew = () => {
 };
 
 export default Crew;
+
+Crew.layout = NavBar;

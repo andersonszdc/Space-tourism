@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import { useEffect } from "react";
@@ -19,16 +20,28 @@ const NavBar: React.FC = ({ children }) => {
         <hr className="divider" />
         <nav className="navbar">
           <ul className="list">
-            <Item number="00" isActive={activeTopic === "/"} topic="home" />
             <Item
+              href="/"
+              number="00"
+              isActive={activeTopic === "/"}
+              topic="home"
+            />
+            <Item
+              href="/destination/1"
               number="01"
-              isActive={activeTopic === "/destination"}
+              isActive={activeTopic.includes("/destination")}
               topic="destination"
             />
-            <Item number="02" isActive={activeTopic === "/crew"} topic="crew" />
             <Item
+              href="/crew/1"
+              number="02"
+              isActive={activeTopic.includes("/crew")}
+              topic="crew"
+            />
+            <Item
+              href="/technology/1"
               number="03"
-              isActive={activeTopic === "/technology"}
+              isActive={activeTopic.includes("/technology")}
               topic="technology"
             />
           </ul>
@@ -39,15 +52,17 @@ const NavBar: React.FC = ({ children }) => {
   );
 };
 
-const Item = ({ number, topic, isActive }) => {
+const Item = ({ number, topic, isActive, href }) => {
   return (
-    <StyledItem isActive={isActive}>
-      <div className="content">
-        <span>{number}</span>
-        {topic}
-      </div>
-      <span className="flare" />
-    </StyledItem>
+    <Link passHref href={href}>
+      <StyledItem isActive={isActive}>
+        <div className="content">
+          <span>{number}</span>
+          {topic}
+        </div>
+        <span className="flare" />
+      </StyledItem>
+    </Link>
   );
 };
 

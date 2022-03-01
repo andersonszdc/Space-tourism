@@ -1,4 +1,5 @@
 import React from "react";
+import NavBar from "../../components/NavBar";
 
 const Destination = () => {
   return (
@@ -35,3 +36,5 @@ const Destination = () => {
 };
 
 export default Destination;
+
+Destination.layout = NavBar;
