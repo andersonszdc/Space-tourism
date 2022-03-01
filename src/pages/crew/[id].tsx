@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "../../styles/crew.module.css";
 
 const Crew = () => {
   return (
-    <main className={styles.container}>
+    <main className="container">
       <h1>
         <span>02</span>meet your crew
       </h1>
@@ -16,7 +15,7 @@ const Crew = () => {
           time as commander of Crew Dragon Demo-2.
         </p>
       </section>
-      <section className={styles.img}></section>
+      <section className="img"></section>
     </main>
   );
 };

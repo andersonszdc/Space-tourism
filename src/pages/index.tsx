@@ -1,9 +1,9 @@
-import styles from "../styles/index.module.css";
+import { Main } from "../styles";
 
 export default function Index() {
   return (
-    <div className={styles.container}>
-      <section className={styles.img}></section>
+    <Main>
+      <div className="img"></div>
       <h2>so, you want to travel to</h2>
       <h1>space</h1>
       <p>
@@ -13,6 +13,6 @@ export default function Index() {
         experience!
       </p>
       <button>explore</button>
-    </div>
+    </Main>
   );
 }

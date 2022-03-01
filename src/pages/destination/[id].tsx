@@ -1,13 +1,12 @@
 import React from "react";
-import styles from "../../styles/destination.module.css";
 
 const Destination = () => {
   return (
-    <main className={styles.container}>
+    <main className="container">
       <h1>
         <span>01</span> pick yout destination
       </h1>
-      <section className={styles.img}></section>
+      <section className="img"></section>
       <section>
         <h1>moon</h1>
         <p>
@@ -19,7 +18,7 @@ const Destination = () => {
           While you’re there, take in some history by visiting the Luna 2 and
           Apollo 11 landing sites.
         </p>
-        <span className={styles.divider} />
+        <span className="divider" />
         <div>
           <div>
             <h2>avg. distance</h2>

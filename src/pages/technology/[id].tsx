@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "../../styles/technology.module.css";
 
 const Technology = () => {
   return (
@@ -19,7 +18,7 @@ const Technology = () => {
             awe-inspiring sight on the launch pad!
           </p>
         </div>
-        <div className={styles.img}></div>
+        <div className="img"></div>
       </section>
     </main>
   );
