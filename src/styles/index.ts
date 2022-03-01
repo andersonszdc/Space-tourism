@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Main = styled.main`
   display: grid;
   position: relative;
+  padding: 0 8%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
   height: 100vh;
@@ -27,6 +28,9 @@ export const Main = styled.main`
 
   .bg-img {
     position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
   }
 
   .content {
