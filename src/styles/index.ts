@@ -5,7 +5,7 @@ export const Main = styled.main`
   padding: 0 8%;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  height: 100vh;
+  height: 100%;
 
   h2 {
     font-family: var(--f-sans-cold);

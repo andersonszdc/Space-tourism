@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
   .header {
     display: grid;
     grid-template-columns: auto 1fr auto;
