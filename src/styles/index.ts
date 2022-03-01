@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+
   h2 {
     font-family: var(--f-sans-cold);
     font-size: 28px;
@@ -17,5 +23,21 @@ export const Main = styled.main`
     font-family: var(--f-sans-normal);
     font-size: 18px;
     font-weight: 400;
+  }
+
+  .bg-img {
+    position: absolute;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `;
