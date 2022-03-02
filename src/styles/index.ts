@@ -18,6 +18,7 @@ export const Main = styled.main`
     font-family: var(--f-serif);
     font-size: 150px;
     text-transform: uppercase;
+    font-weight: 400;
   }
   p {
     font-family: var(--f-sans-normal);

@@ -1,23 +1,31 @@
+import Image from "next/image";
 import React from "react";
 import NavBar from "../../components/NavBar";
+import { Container } from "../../styles/crew";
 
 const Crew = () => {
   return (
-    <main className="container">
-      <h1>
-        <span>02</span>meet your crew
-      </h1>
-      <section>
-        <h2>commander</h2>
-        <h1>douglas hurley</h1>
-        <p>
+    <Container>
+      <section className="info">
+        <h1 className="info__title">
+          <span className="emphasis">02</span>meet your crew
+        </h1>
+        <h2 className="info__role">commander</h2>
+        <h1 className="info__name">douglas hurley</h1>
+        <p className="info__description">
           Douglas Gerald Hurley is an American engineer, former Marine Corps
           pilot and former NASA astronaut. He launched into space for the third
           time as commander of Crew Dragon Demo-2.
         </p>
       </section>
-      <section className="img"></section>
-    </main>
+      <Image
+        src="/crew/image-douglas-hurley.png"
+        width={514}
+        objectFit="contain"
+        height={700}
+        alt="foto da lua"
+      />
+    </Container>
   );
 };
 
