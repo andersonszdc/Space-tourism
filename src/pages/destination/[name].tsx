@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import NavBar from "../../components/NavBar";
-import { Main } from "../../styles/technology";
+import { Main } from "../../styles/destination";
 
 const Destination = () => {
   return (
