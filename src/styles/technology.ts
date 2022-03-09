@@ -50,4 +50,13 @@ export const Container = styled.main`
     font-weight: 400;
     color: hsl(var(--clr-light));
   }
+
+  .bg-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
 `;

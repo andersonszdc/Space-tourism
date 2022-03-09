@@ -6,6 +6,13 @@ import { Container } from "../../styles/crew";
 const Crew = () => {
   return (
     <Container>
+      <div className="bg-img">
+        <Image
+          src="/crew/background-crew-desktop.jpg"
+          layout="fill"
+          alt="imagem de fundo"
+        />
+      </div>
       <section className="info">
         <h1 className="info__title">
           <span className="emphasis">02</span>meet your crew

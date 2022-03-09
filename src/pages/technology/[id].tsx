@@ -6,6 +6,13 @@ import { Container } from "../../styles/technology";
 const Technology = () => {
   return (
     <Container>
+      <div className="bg-img">
+        <Image
+          src="/technology/background-technology-desktop.jpg"
+          layout="fill"
+          alt="imagem de fundo"
+        />
+      </div>
       <h1 className="title">
         <span className="emphasis">03</span>space launch 101
       </h1>
