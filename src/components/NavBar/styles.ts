@@ -7,11 +7,12 @@ export const Main = styled.div`
 
   .header {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: 40px 1fr auto;
     justify-content: space-between;
     align-items: center;
     padding: 32px 0;
     padding-left: 5%;
+    transition: 1s ease-in-out;
   }
 
   .divider {
@@ -19,18 +20,50 @@ export const Main = styled.div`
     margin-left: 64px;
     width: calc(100% - 32px);
     border-color: hsl(var(--clr-white), 25%);
+    transition: 1s ease-in-out;
   }
 
   .navbar {
     padding: 32px 160px 32px 120px;
     background-color: hsl(var(--clr-white), 5%);
     backdrop-filter: blur(81.5485px);
+    transition: 1s ease-in-out;
   }
 
   .list {
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: 48px;
+    transition: 1s ease-in-out;
+  }
+
+  @media (max-width: 900px) {
+    .navbar {
+      padding: 32px;
+    }
+
+    .divider {
+     margin-left: 16px;
+      width: calc(100% - 8px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header {
+      padding: 0;
+    }
+
+    .list {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin: 32px;
+    }
   }
 `;
 

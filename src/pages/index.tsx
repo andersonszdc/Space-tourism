@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useCallback } from "react";
 import { useRef } from "react";
 import MainButton from "../components/MainButton";
 import NavBar from "../components/NavBar";
 import { useResizeObserver } from "../hooks/useResizeObserver";
 import { Main } from "../styles";
 
-export default function Index({ oi }) {
+export default function Index() {
   const bgRef = useRef(null);
   const [width, height] = useResizeObserver(bgRef);
-  console.log(oi);
   const [device, setDevice] = useState("desktop");
 
   useEffect(() => {
@@ -22,10 +20,6 @@ export default function Index({ oi }) {
     } else {
       setDevice("mobile");
     }
-  }, [width]);
-
-  useEffect(() => {
-    console.log(width);
   }, [width]);
 
   return (

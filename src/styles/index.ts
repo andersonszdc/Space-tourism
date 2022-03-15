@@ -46,4 +46,13 @@ export const Main = styled.main`
     justify-content: center;
     align-items: center;
   }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+
+    .content {
+      align-items: center;
+      text-align: center;
+    }
+  }
 `;
