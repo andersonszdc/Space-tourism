@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: MyAppProps) {
     <>
       <GlobalStyle />
       <CustomLayout>
-        <Component {...pageProps} />
+        <Component oi="oirs" {...pageProps} />
       </CustomLayout>
     </>
   );

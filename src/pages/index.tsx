@@ -1,14 +1,38 @@
 import Image from "next/image";
+import { useEffect } from "react";
+import { useState } from "react";
+import { useCallback } from "react";
+import { useRef } from "react";
 import MainButton from "../components/MainButton";
 import NavBar from "../components/NavBar";
+import { useResizeObserver } from "../hooks/useResizeObserver";
 import { Main } from "../styles";
 
-export default function Index() {
+export default function Index({ oi }) {
+  const bgRef = useRef(null);
+  const [width, height] = useResizeObserver(bgRef);
+  console.log(oi);
+  const [device, setDevice] = useState("desktop");
+
+  useEffect(() => {
+    if (width > 768) {
+      setDevice("desktop");
+    } else if (width < 768 && width > 375) {
+      setDevice("tablet");
+    } else {
+      setDevice("mobile");
+    }
+  }, [width]);
+
+  useEffect(() => {
+    console.log(width);
+  }, [width]);
+
   return (
     <Main>
-      <div className="bg-img">
+      <div ref={bgRef} className="bg-img">
         <Image
-          src="/home/background-home-desktop.jpg"
+          src={`/home/background-home-${device}.jpg`}
           layout="fill"
           alt="imagem de fundo"
         />
