@@ -1,48 +1,77 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  margin-top: 90px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 90px;
   padding: 0 8%;
-  height: 100%;
+  min-height: calc(100vh - 147px);
+  column-gap: 90px;
+  grid-template:
+    "title image" auto
+    "role image" auto
+    "name image" auto
+    "description image" auto
+    "slider image" 1fr
+    / 1fr 1fr;
 
-  .info {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .info__title {
+  .title {
     font-family: var(--f-sans-cold);
     font-size: 28px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 30%;
+    grid-area: title;
   }
 
-  .info__role {
+  .role {
     font-family: var(--f-serif);
     font-size: 32px;
     text-transform: uppercase;
     font-weight: 400;
     opacity: 50%;
-    margin-bottom: 16px;
+    grid-area: role;
+    margin-top: 150px;
   }
 
-  .info__name {
+  .name {
     font-family: var(--f-serif);
     font-size: 56px;
     text-transform: uppercase;
     font-weight: 400;
-    margin-bottom: 28px;
+    grid-area: name;
+    margin-top: 16px;
+    margin-bottom: 32px;
   }
 
-  .info__description {
+  .description {
     font-family: var(--f-sans-normal);
     font-size: 18px;
     font-weight: 400;
     color: hsl(var(--clr-light));
+    grid-area: description;
+  }
+
+  .slider {
+    grid-area: slider;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .oval {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.2;
+    cursor: pointer;
+  }
+
+  .oval.active {
+    opacity: 1;
+  }
+
+  .image {
+    grid-area: image;
+    margin-top: auto;
   }
 
   .emphasis {

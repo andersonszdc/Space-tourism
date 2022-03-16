@@ -7,12 +7,19 @@ export const Main = styled.main`
   align-items: center;
   grid-template-columns: 1fr 1fr;
 
+  .visual {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .visual h1 {
     font-family: var(--f-sans-cold);
     font-weight: 400;
     font-size: 28px;
     text-transform: uppercase;
     margin-bottom: 90px;
+    width: 100%;
   }
 
   .emphasis {
@@ -78,5 +85,19 @@ export const Main = styled.main`
     left: 0;
     right: 0;
     z-index: -1;
+  }
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
+
+    .visual {
+      align-items: center;
+    }
+
+    .information {
+      align-items: center;
+      text-align: center;
+    }
   }
 `;
