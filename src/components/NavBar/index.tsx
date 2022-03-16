@@ -57,7 +57,7 @@ const NavBar: React.FC = ({ children }) => {
                   topic="destination"
                 />
                 <Item
-                  href="/crew/1"
+                  href="/crew"
                   number="02"
                   isActive={activeTopic.includes("/crew")}
                   topic="crew"
