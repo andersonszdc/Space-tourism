@@ -7,20 +7,21 @@ export const Main = styled.main`
   grid-template-rows: 1fr;
   height: 100%;
 
-  h2 {
+  .call {
     font-family: var(--f-sans-cold);
     font-size: 28px;
     font-weight: 400;
     text-transform: uppercase;
   }
 
-  h1 {
+  .emphasis {
     font-family: var(--f-serif);
     font-size: 150px;
     text-transform: uppercase;
     font-weight: 400;
   }
-  p {
+
+  .explanation {
     font-family: var(--f-sans-normal);
     font-size: 18px;
     font-weight: 400;
@@ -53,6 +54,20 @@ export const Main = styled.main`
     .content {
       align-items: center;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .call {
+      font-size: 16px;
+    }
+
+    .emphasis {
+      font-size: 80px;
+    }
+
+    .explanation {
+      font-size: 15px;
     }
   }
 `;

@@ -4,7 +4,7 @@ import { Container } from "./styles";
 const MainButton = () => {
   return (
     <Container>
-      <div>explore</div>
+      <div className="expand">explore</div>
     </Container>
   );
 };

@@ -7,10 +7,10 @@ export const Container = styled.button`
   transition: .4s ease-out;
 
   :hover {
-    padding: 120px;
+    padding: 15%;
   }
 
-  div {
+  .expand {
     display: flex;
     align-items: center;
     justify-content: center;
