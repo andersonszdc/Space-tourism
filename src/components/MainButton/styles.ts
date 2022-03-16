@@ -5,7 +5,6 @@ export const Container = styled.button`
   cursor: pointer;
   border-radius: 50%;
   transition: .4s ease-out;
-  position: absolute;
 
   :hover {
     padding: 120px;
