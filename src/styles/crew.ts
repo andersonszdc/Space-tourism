@@ -70,6 +70,7 @@ export const Container = styled.main`
   }
 
   .image {
+    display: flex;
     grid-area: image;
     margin-top: auto;
   }
@@ -87,5 +88,62 @@ export const Container = styled.main`
     left: 0;
     right: 0;
     z-index: -1;
+  }
+
+  @media (max-width: 1000px) {
+    grid-template:
+      "title" auto
+      "role" auto
+      "name" auto
+      "description" auto
+      "slider" auto
+      "image" auto
+      / auto;
+
+    .role {
+      margin-top: 90px;
+    }
+
+    .role,
+    .name,
+    .description {
+      text-align: center;
+    }
+
+    .slider {
+      justify-content: center;
+      margin: 48px 0;
+    }
+
+    .image {
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 500px) {
+    grid-template:
+      "title" auto
+      "image" auto
+      "slider" auto
+      "role" auto
+      "name" auto
+      "description" auto
+      / auto;
+      
+      .title {
+        margin-bottom: 32px;
+      }
+
+      .role {
+        margin-top: 0;
+      }
+
+      .image {
+        border-bottom: 1px solid #383B4B;
+      }
+
+      .description {
+        padding-bottom: 90px;
+      }
   }
 `;
