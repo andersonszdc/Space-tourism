@@ -18,7 +18,7 @@ export const Container = styled.main`
 
   .content {
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template: "slider info image";
     align-items: center;
     gap: 40px;
   }
@@ -27,6 +27,7 @@ export const Container = styled.main`
     display: flex;
     flex-direction: column;
     gap: 16px;
+    grid-area: slider;
   }
 
   .oval {
@@ -56,6 +57,7 @@ export const Container = styled.main`
   .info {
     display: flex;
     flex-direction: column;
+    grid-area: info;
   }
 
   .info__sub {
@@ -85,6 +87,7 @@ export const Container = styled.main`
   .image {
     display: flex;
     justify-content: flex-end;
+    grid-area: image;
   }
 
   .bg-img {
@@ -94,5 +97,33 @@ export const Container = styled.main`
     left: 0;
     right: 0;
     z-index: -1;
+  }
+
+  @media (max-width: 1000px) {
+    padding-left: 0;
+
+    .title {
+      padding-left: 8%;
+    }
+
+    .slider {
+      justify-content: center;
+      flex-direction: row;
+    }
+
+    .info {
+      text-align: center;
+    }
+
+    .info__description {
+      padding: 0 15%;
+    }
+
+    .content {
+      grid-template:
+        "image"
+        "slider"
+        "info";
+    }
   }
 `;
