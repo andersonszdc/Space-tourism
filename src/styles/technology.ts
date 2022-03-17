@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.main`
-  padding: 0 8%;
+  padding: 0 0 0 8%;
 
   .title {
     font-family: var(--f-sans-cold);
@@ -18,12 +18,14 @@ export const Container = styled.main`
 
   .content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto auto auto;
     align-items: center;
+    gap: 40px;
   }
 
   .slider {
     display: flex;
+    flex-direction: column;
     gap: 16px;
   }
 
@@ -78,6 +80,11 @@ export const Container = styled.main`
     font-size: 18px;
     font-weight: 400;
     color: hsl(var(--clr-light));
+  }
+
+  .image {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .bg-img {
