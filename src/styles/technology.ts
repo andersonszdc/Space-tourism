@@ -85,8 +85,10 @@ export const Container = styled.main`
   }
 
   .image {
+    position: relative;
+    min-width: 515px;
+    height: 527px;
     display: flex;
-    justify-content: flex-end;
     grid-area: image;
   }
 
@@ -124,6 +126,12 @@ export const Container = styled.main`
         "image"
         "slider"
         "info";
+    }
+
+    .image {
+      width: 100%;
+      aspect-ratio: 384/155;
+      height: max-content;
     }
   }
 `;

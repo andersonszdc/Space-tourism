@@ -1,17 +1,30 @@
 import Image from "next/image";
 import React from "react";
+import { useRef } from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import NavBar from "../../components/NavBar";
+import { useResizeObserver } from "../../hooks/useResizeObserver";
 import { Container } from "../../styles/technology";
 
 const Technology = ({ tech }) => {
   const [currentTech, setCurrentTech] = useState<any>([]);
   const [ovalActive, setOvalActive] = useState(0);
+  const [isLandscape, setIsLandscape] = useState(false);
+  const containerRef = useRef(null);
+  const [width, height] = useResizeObserver(containerRef);
 
   useEffect(() => {
     setCurrentTech(tech[ovalActive]);
   }, [ovalActive, tech]);
+
+  useEffect(() => {
+    if (width < 1000) {
+      setIsLandscape(true);
+    } else {
+      setIsLandscape(false);
+    }
+  }, [width]);
 
   const handleOval = (e: React.MouseEvent<HTMLSpanElement>) => {
     const newOval = parseInt((e.target as HTMLSpanElement).id);
@@ -20,7 +33,7 @@ const Technology = ({ tech }) => {
 
   return (
     currentTech.length !== 0 && (
-      <Container>
+      <Container ref={containerRef}>
         <div className="bg-img">
           <Image
             src="/technology/background-technology-desktop.jpg"
@@ -62,9 +75,13 @@ const Technology = ({ tech }) => {
           </div>
           <div className="image">
             <Image
-              src={currentTech.images.portrait}
-              width={515}
-              height={527}
+              src={
+                isLandscape
+                  ? currentTech.images.landscape
+                  : currentTech.images.portrait
+              }
+              layout="fill"
+              objectFit="cover"
               alt="foto da lua"
             />
           </div>
