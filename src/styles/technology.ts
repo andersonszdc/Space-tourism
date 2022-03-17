@@ -22,6 +22,35 @@ export const Container = styled.main`
     align-items: center;
   }
 
+  .slider {
+    display: flex;
+    gap: 16px;
+  }
+
+  .oval {
+    text-align: center;
+    width: 80px;
+    line-height: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+
+    font-size: 32px;
+    font-family: var(--f-serif);
+
+    background-color: transparent;
+    border-color: hsl(var(--clr-white), 20%);
+    color: hsl(var(--clr-white));
+  }
+
+  .oval.active {
+    background-color: hsl(var(--clr-white));
+    border-color: hsl(var(--clr-white));
+    color: hsl(var(--clr-dark));
+  }
+
   .info {
     display: flex;
     flex-direction: column;
