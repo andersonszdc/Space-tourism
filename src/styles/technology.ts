@@ -18,7 +18,7 @@ export const Container = styled.main`
 
   .content {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(3, auto);
     align-items: center;
     gap: 40px;
   }
@@ -76,7 +76,7 @@ export const Container = styled.main`
   }
 
   .info__description {
-    font-family: var() (--f-sans-normal);
+    font-family: var(--f-sans-normal);
     font-size: 18px;
     font-weight: 400;
     color: hsl(var(--clr-light));

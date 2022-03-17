@@ -63,7 +63,7 @@ const NavBar: React.FC = ({ children }) => {
                   topic="crew"
                 />
                 <Item
-                  href="/technology/1"
+                  href="/technology"
                   number="03"
                   isActive={activeTopic.includes("/technology")}
                   topic="technology"
